@@ -61,7 +61,7 @@ your_datapack/functions/help/your_function.mcfunction
 tellraw @s {"text":"function #math:your_function","underlined": true,"clickEvent": {"action": "run_command","value": "/function your_datapack:your_function/help"}}
 ```
 
-#### 現在標準で対応している関数一覧 / Default Supported Functions
+## 現在標準で対応している関数一覧 / Default Supported Functions
 
 1. sin
 2. cos
@@ -70,7 +70,7 @@ tellraw @s {"text":"function #math:your_function","underlined": true,"clickEvent
 5. random
 6. dice
 
-#### sin/cos/tan
+### sin/cos/tan
 
 sin/cos/tanを取得します。角度は度数法で指定します。  
 入力(math: in) : 角度(int)  
@@ -83,7 +83,7 @@ data get storage math: out
 -> 0.5d
 ```
 
-#### sqrt
+### sqrt
 
 平方根を取得します。
 入力は0.00000001(一億分の一)から100000000(一億)まで。結果は有効数字4桁です。  
@@ -97,7 +97,7 @@ data get storage math: out
 -> 0.22360000000000002d
 ```
 
-#### random
+### random
 
 0 から 2147483647 までの乱数を生成します。  
 入力(math: in) : なし(-)  
@@ -109,7 +109,7 @@ data get storage math: out
 -> 1195316795
 ```
 
-#### dice
+### dice
 
 サイコロを振った結果を返します。ダイスは1024面くらいまで推奨です。  
 入力(math: in)      : N個のX面ダイス[N, X] / NdX ([int, int])  
