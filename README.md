@@ -86,7 +86,7 @@ data get storage math: out
 #### sqrt
 
 平方根を取得します。
-入力は0.00000001(一億分の一)から100000000(一億)まで。結果は有効数字4桁です。
+入力は0.00000001(一億分の一)から100000000(一億)まで。結果は有効数字4桁です。  
 入力(math: in) : 実数(double)  
 出力(math: out): 平方根(double)
 
@@ -99,7 +99,7 @@ data get storage math: out
 
 #### random
 
-0 から 2147483647 までの乱数を生成します。
+0 から 2147483647 までの乱数を生成します。  
 入力(math: in) : なし(-)  
 出力(math: out): 乱数(int)
 
@@ -111,7 +111,7 @@ data get storage math: out
 
 #### dice
 
-サイコロを振った結果を返します。ダイスは1024面くらいまで推奨です。
+サイコロを振った結果を返します。ダイスは1024面くらいまで推奨です。  
 入力(math: in)      : N個のX面ダイス[N, X] / NdX ([int, int])  
 出力(math: out.dice): それぞれの出目[出目1, 出目2, ...] / Number of dice rolls ([int, int, ...])
 出力(math: out.sum) : 合計値 / SUM (int)
