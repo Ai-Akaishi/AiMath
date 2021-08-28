@@ -123,10 +123,10 @@ data get storage math: out
 -> {dice: [4, 5, 1, 3, 5, 4, 3, 3, 1, 4], sum: 33}
 ```
 
-## 連絡はこちら/Contact
+## 連絡はこちら / Contact
 
 <https://twitter.com/AiAkaishi>
 
-## ライセンス/LICENSE
+## ライセンス / LICENSE
 
 These codes are released under the MIT License, see LICENSE.
