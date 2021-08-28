@@ -1,9 +1,8 @@
-### Copyright © 2021 赤石愛
-### This software is released under the MIT License, see LICENSE.
-
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+### Copyright © 2021 赤石愛
+### This software is released under the MIT License, see LICENSE.
 import codecs
 import math
 
