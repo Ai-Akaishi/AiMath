@@ -7,14 +7,14 @@
 ## 出力: sin(double) => storage math: out
 
 # 一時的なスコアボード
-scoreboard objectives add _ dummy
+scoreboard objectives add AiMath dummy
 
 # 値取得
 function math:circular/common
 
 # 値を返す
-execute if score Angle360 _ matches ..180 run data modify storage math: out set from storage math:table circular[-4][-4][-4][-4][0]
-execute if score Angle360 _ matches 181.. run data modify storage math: out set from storage math:table circular[-4][-4][-4][-4][1]
+execute if score Angle360 AiMath matches ..179 run data modify storage math: out set from storage math:table circular[-4][-4][-4][-4][0]
+execute if score Angle360 AiMath matches 180.. run data modify storage math: out set from storage math:table circular[-4][-4][-4][-4][1]
 
 # スコアボード削除
-scoreboard objectives remove _
+scoreboard objectives remove AiMath

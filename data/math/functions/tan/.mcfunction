@@ -7,7 +7,7 @@
 ## 出力: tan(double) => storage math: out
 
 # 一時的なスコアボード
-scoreboard objectives add _ dummy
+scoreboard objectives add AiMath dummy
 
 # 値取得
 function math:circular/common
@@ -16,4 +16,4 @@ function math:circular/common
 data modify storage math: out set from storage math:table circular[-4][-4][-4][-4][4]
 
 # スコアボード削除
-scoreboard objectives remove _
+scoreboard objectives remove AiMath
