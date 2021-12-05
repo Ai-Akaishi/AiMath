@@ -11,7 +11,7 @@ scoreboard objectives add AiMath dummy
 
 # 設定されない可能性のある値を初期化
 scoreboard players set R AiMath -1
-data modify storage math: out set value 0f
+data modify storage math: out set value 0d
 
 # 入力に応じてスケール変更
 execute store result score V AiMath run data get storage math: in 1
