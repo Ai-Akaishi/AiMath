@@ -76,7 +76,7 @@ execute if score V AiMath matches 100..9999 store result storage math: out doubl
 execute if score V AiMath matches 1..99 store result storage math: out double -0.001 run scoreboard players get R AiMath
 
 execute store result score V AiMath run data get storage math: in 100000000
-execute if score V AiMath matches 1000000..100000000 store result storage math: out double -0.0001 run scoreboard players get R AiMath
+execute if score V AiMath matches 1000000..99999999 store result storage math: out double -0.0001 run scoreboard players get R AiMath
 execute if score V AiMath matches 10000..999999 store result storage math: out double -0.00001 run scoreboard players get R AiMath
 execute if score V AiMath matches 100..9999 store result storage math: out double -0.000001 run scoreboard players get R AiMath
 execute if score V AiMath matches 1..99 store result storage math: out double -0.0000001 run scoreboard players get R AiMath
