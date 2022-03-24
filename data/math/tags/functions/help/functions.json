@@ -6,6 +6,7 @@
 		"math:help/tan",
 		"math:help/sqrt",
 		"math:help/random",
-		"math:help/dice"
+		"math:help/dice",
+		"math:help/maze"
 	]
 }

@@ -6,7 +6,7 @@ Mathematics Functions Library Datapack
 ## 動作確認済みバージョン / Verified minecraft versions
 
 - 1.17.1
-- 1.18.0
+- 1.18.x
 
 ## 使い方 / How To Use
 
@@ -70,6 +70,7 @@ tellraw @s {"text":"function #math:your_function","underlined": true,"clickEvent
 4. sqrt
 5. random
 6. dice
+7. maze
 
 ### sin/cos/tan
 
@@ -124,6 +125,30 @@ data get storage math: out
 -> {dice: [4, 5, 1, 3, 5, 4, 3, 3, 1, 4], sum: 33}
 ```
 
+### maze
+
+32x32部屋までのクラスタリング迷路を生成します。  
+一時的にエンティティを使用しているので、プレイヤーのいる場所からなど  
+確実に読み込まれているチャンクから呼び出してください。  
+入力(math: in)      : N部屋xM部屋の迷路[N, M] / NxM-room maze ([int, int])  
+出力(math: out): 迷路 / Maze ([[■/□,...],...])  
+(おまけ)math:maze/dump
+テスト用。変更可能性あり。迷路生成結果math:outをログに表示するだけです。
+
+```nim
+data modify storage math: in set value [4,3]
+function #math:maze
+data get storage math: out
+-> [
+["■", "■", "■", "■", "■", "■", "■", "■", "■"],
+["■", "□", "□", "□", "□", "□", "□", "□", "■"],
+["■", "■", "■", "■", "■", "□", "■", "■", "■"],
+["■", "□", "□", "□", "□", "□", "■", "□", "■"],
+["■", "□", "■", "■", "■", "□", "■", "□", "■"],
+["■", "□", "□", "□", "■", "□", "□", "□", "■"],
+["■", "■", "■", "■", "■", "■", "■", "■", "■"]
+]
+```
 ## 連絡はこちら / Contact
 
 <https://twitter.com/AiAkaishi>
