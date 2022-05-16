@@ -71,6 +71,8 @@ tellraw @s {"text":"function #math:your_function","underlined": true,"clickEvent
 5. random
 6. dice
 7. maze
+8. clock
+9. motion
 
 ### sin/cos/tan
 
@@ -132,7 +134,7 @@ data get storage math: out
 確実に読み込まれているチャンクから呼び出してください。  
 入力(math: in)      : N部屋xM部屋の迷路[N, M] / NxM-room maze ([int, int])  
 出力(math: out): 迷路 / Maze ([[■/□,...],...])  
-(おまけ)math:maze/dump
+(おまけ)math:maze/dump  
 テスト用。変更可能性あり。迷路生成結果math:outをログに表示するだけです。
 
 ```nim
@@ -149,6 +151,35 @@ data get storage math: out
 ["■", "■", "■", "■", "■", "■", "■", "■", "■"]
 ]
 ```
+
+### clock
+
+時計としてのデータを生成します。  
+入力(math: in) : tick(int) => storage math: in  
+出力(math: out): 時計データ => storage math: out:{day:日数(int),hour:時間(int),minute:分(int),second:秒(int),sent:センチ秒(int),  total_hour:トータル時間(int),total_minute:トータル分(int),total_second:トータル秒(int),total_sent:トータルセンチ秒(int)}
+
+```nim
+data modify storage math: in set value 1234567
+function #math:clock
+data get storage math: out
+-> {day: 0, hour: 17, minute: 8, second: 48, cent: 35, total_hour: 17, total_minute: 1028, total_second: 61728, total_cent: 6172835}
+```
+
+### motion
+
+速度１のMotionを取得します。角度は度数法で指定します。  
+一時的にエンティティを使用しているので、プレイヤーのいる場所からなど  
+確実に読み込まれているチャンクから呼び出してください。  
+入力(math: in) : Rotation([float,float]) => storage math: in  
+出力(math: out): Motion([double,double,double]) => storage math: out  
+
+```nim
+data modify storage math: in set value [-146.08746f, -14.09289f]
+function #math:motion
+data get storage math: out
+-> [0.5410958528518677d, 0.24344515800476074d, -0.8049014210700989d]
+```
+
 ## 連絡はこちら / Contact
 
 <https://twitter.com/AiAkaishi>

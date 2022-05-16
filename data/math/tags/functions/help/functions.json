@@ -7,6 +7,8 @@
 		"math:help/sqrt",
 		"math:help/random",
 		"math:help/dice",
-		"math:help/maze"
+		"math:help/maze",
+		"math:help/clock",
+		"math:help/motion"
 	]
 }
