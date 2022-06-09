@@ -5,8 +5,9 @@ Mathematics Functions Library Datapack
 
 ## 動作確認済みバージョン / Verified minecraft versions
 
-- 1.17.1
+- 1.19
 - 1.18.x
+- 1.17.1
 
 ## 使い方 / How To Use
 
@@ -73,6 +74,7 @@ tellraw @s {"text":"function #math:your_function","underlined": true,"clickEvent
 7. maze
 8. clock
 9. motion
+10. sort/ascend sort/descend
 
 ### sin/cos/tan
 
@@ -178,6 +180,38 @@ data modify storage math: in set value [-146.08746f, -14.09289f]
 function #math:motion
 data get storage math: out
 -> [0.5410958528518677d, 0.24344515800476074d, -0.8049014210700989d]
+```
+
+### sort
+
+与えられたリストを昇順or降順でソートします。  
+並べかえられるリストは、byte型、short型、int型,weightを持つtag_compoundです。  
+入力(math: in) : 並べ替えるリスト([(byte/short/int/{weight:int},..]) => storage math: in  
+出力(math: out): 並べ替えたリスト([(byte/short/int/{weight:int},..]) => storage math: out  
+
+```mcfunction
+## For Integer List  
+## Any type of integer EXCEPT LONG is OK  
+data modify storage math: in set value [3,8,1,2,10,5,6,2,9,1,5,4,7]  
+function #math:sort/ascend  
+data get storage math: out  
+# => [1, 1, 2, 2, 3, 4, 5, 5, 6, 7, 8, 9, 10]  
+  
+function #math:sort/descend  
+data get storage math: out  
+# => [10, 9, 8, 7, 6, 5, 5, 4, 3, 2, 2, 1, 1]  
+  
+  
+## For Compound List  
+## Compound needs to have weight.  
+data modify storage math: in set value [{weight:3,value:"three"},{weight:8,value:"eight"},{weight:1,value:"one"},{weight:2,value:"two"},{weight:10,value:"ten"},{weight:5,value:"five"},{weight:6,value:"six"},{weight:2,value:"two"},{weight:9,value:"nine"},{weight:1,value:"one"},{weight:5,value:"five"},{weight:4,value:"four"},{weight:7,value:"seven"}]  
+function #math:sort/ascend  
+data get storage math: out  
+# => [{weight: 1, value: "one"}, {weight: 1, value: "one"}, {weight: 2, value: "two"}, {weight: 2, value: "two"}, {weight: 3, value: "three"}, {weight: 4, value: "four"}, {weight: 5, value: "five"}, {weight: 5, value: "five"}, {weight: 6, value: "six"}, {weight: 7, value: "seven"}, {weight: 8, value: "eight"}, {weight: 9, value: "nine"}, {weight: 10, value: "ten"}]  
+  
+function #math:sort/descend  
+data get storage math: out  
+# => [{weight: 10, value: "ten"}, {weight: 9, value: "nine"}, {weight: 8, value: "eight"}, {weight: 7, value: "seven"}, {weight: 6, value: "six"}, {weight: 5, value: "five"}, {weight: 5, value: "five"}, {weight: 4, value: "four"}, {weight: 3, value: "three"}, {weight: 2, value: "two"}, {weight: 2, value: "two"}, {weight: 1, value: "one"}, {weight: 1, value: "one"}]
 ```
 
 ## 連絡はこちら / Contact

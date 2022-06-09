@@ -9,6 +9,7 @@
 		"math:help/dice",
 		"math:help/maze",
 		"math:help/clock",
-		"math:help/motion"
+		"math:help/motion",
+		"math:help/sort"
 	]
 }
