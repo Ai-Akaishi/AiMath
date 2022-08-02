@@ -14,6 +14,5 @@ execute if data storage math: in[0].weight run function math:sort/compound/ascen
 execute unless data storage math: in[0].weight run function math:sort/number/ascend/
 
 # スコアボード削除
-scoreboard players reset _1 AiMath
-scoreboard players reset _2 AiMath
+scoreboard players reset * AiMath
 scoreboard objectives remove AiMath
