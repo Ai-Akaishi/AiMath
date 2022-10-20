@@ -216,6 +216,26 @@ data get storage math: out
 # => [{weight: 10, value: "ten"}, {weight: 9, value: "nine"}, {weight: 8, value: "eight"}, {weight: 7, value: "seven"}, {weight: 6, value: "six"}, {weight: 5, value: "five"}, {weight: 5, value: "five"}, {weight: 4, value: "four"}, {weight: 3, value: "three"}, {weight: 2, value: "two"}, {weight: 2, value: "two"}, {weight: 1, value: "one"}, {weight: 1, value: "one"}]
 ```
 
+### randomize
+
+与えられたリストをランダムに並び替えます。  
+入力(math: in) : 並べ替えるリスト([...]) => storage math: in  
+出力(math: out): 並べ替えたリスト([...]) => storage math: out  
+
+```mcfunction
+## For Integer List  
+## Any type of integer EXCEPT LONG is OK  
+data modify storage math: in set value [1,2,3,4,5,6,7,8,9,10]  
+function #math:randomize  
+data get storage math: out  
+# => [3, 5, 9, 6, 4, 8, 2, 1, 7, 10]  
+  
+data modify storage math: in set value [{number:"A",suit:"♥"},{number:"A",suit:"♦"},{number:"A",suit:"♠"},{number:"A",suit:"♣"},{number:10,suit:"♥"},{number:10,suit:"♦"},{number:10,suit:"♠"},{number:10,suit:"♣"},{number:"J",suit:"♥"},{number:"J",suit:"♦"},{number:"J",suit:"♠"},{number:"J",suit:"♣"},{number:"Q",suit:"♥"},{number:"Q",suit:"♦"},{number:"Q",suit:"♠"},{number:"Q",suit:"♣"},{number:"K",suit:"♥"},{number:"K",suit:"♦"},{number:"K",suit:"♠"},{number:"K",suit:"♣"},{number:"Joker",suit:"Joker"}]  
+function #math:randomize  
+data get storage math: out  
+# => [{number: "Q", suit: "♣"}, {number: "K", suit: "♦"}, {number: "J", suit: "♠"}, {number: 10, suit: "♦"}, {number: "J", suit: "♦"}, {number: 10, suit: "♥"}, {number: "Q", suit: "♠"}, {number: "J", suit: "♥"}, {number: "K", suit: "♣"}, {number: "A", suit: "♠"}, {number: "J", suit: "♣"}, {number: "A", suit: "♦"}, {number: "A", suit: "♥"}, {number: "K", suit: "♠"}, {number: "K", suit: "♥"}, {number: 10, suit: "♠"}, {number: "Q", suit: "♥"}, {number: "Joker", suit: "Joker"}, {number: "Q", suit: "♦"}, {number: "A", suit: "♣"}, {number: 10, suit: "♣"}]  
+```
+
 ## 連絡はこちら / Contact
 
 <https://twitter.com/AiAkaishi>
