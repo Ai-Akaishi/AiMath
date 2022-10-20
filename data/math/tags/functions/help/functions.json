@@ -10,6 +10,7 @@
 		"math:help/maze",
 		"math:help/clock",
 		"math:help/motion",
-		"math:help/sort"
+		"math:help/sort",
+		"math:help/randomize"
 	]
 }

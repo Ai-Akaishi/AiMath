@@ -5,6 +5,7 @@ Mathematics Functions Library Datapack
 
 ## 動作確認済みバージョン / Verified minecraft versions
 
+- 1.19.2
 - 1.19
 - 1.18.x
 - 1.17.1
@@ -75,6 +76,7 @@ tellraw @s {"text":"function #math:your_function","underlined": true,"clickEvent
 8. clock
 9. motion
 10. sort/ascend sort/descend
+11. randomize
 
 ### sin/cos/tan
 

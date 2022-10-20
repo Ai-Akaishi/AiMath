@@ -20,5 +20,5 @@ execute store result score _ AiMath run data get storage math:_ angle 1
 execute unless score _ AiMath = Angle AiMath run function math:circular/shift_table
 
 # スコアボード削除
-scoreboard players reset Angle AiMath
+scoreboard players reset * AiMath
 scoreboard objectives remove AiMath

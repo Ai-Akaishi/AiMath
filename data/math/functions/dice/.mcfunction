@@ -20,4 +20,7 @@ data modify storage math: out set value {dice:[],sum:0}
 function math:dice/loop
 
 # スコアボード削除
+scoreboard players reset Random AiMath
+scoreboard players reset Max AiMath
+scoreboard players reset Sum AiMath
 scoreboard objectives remove AiMath

@@ -30,4 +30,5 @@ execute store result storage math: out.hour int 1 run scoreboard players operati
 execute store result storage math: out.day int 1 run scoreboard players operation 日数 AiMath /= _ AiMath
 
 # スコアボード削除
+scoreboard players reset * AiMath
 scoreboard objectives remove AiMath
