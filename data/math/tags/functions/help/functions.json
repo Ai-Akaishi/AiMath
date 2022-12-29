@@ -11,6 +11,7 @@
 		"math:help/clock",
 		"math:help/motion",
 		"math:help/sort",
-		"math:help/randomize"
+		"math:help/randomize",
+		"math:help/split_number"
 	]
 }

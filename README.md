@@ -77,6 +77,7 @@ tellraw @s {"text":"function #math:your_function","underlined": true,"clickEvent
 9. motion
 10. sort/ascend sort/descend
 11. randomize
+12. split_number
 
 ### sin/cos/tan
 
@@ -234,6 +235,24 @@ data modify storage math: in set value [{number:"A",suit:"♥"},{number:"A",suit
 function #math:randomize  
 data get storage math: out  
 # => [{number: "Q", suit: "♣"}, {number: "K", suit: "♦"}, {number: "J", suit: "♠"}, {number: 10, suit: "♦"}, {number: "J", suit: "♦"}, {number: 10, suit: "♥"}, {number: "Q", suit: "♠"}, {number: "J", suit: "♥"}, {number: "K", suit: "♣"}, {number: "A", suit: "♠"}, {number: "J", suit: "♣"}, {number: "A", suit: "♦"}, {number: "A", suit: "♥"}, {number: "K", suit: "♠"}, {number: "K", suit: "♥"}, {number: 10, suit: "♠"}, {number: "Q", suit: "♥"}, {number: "Joker", suit: "Joker"}, {number: "Q", suit: "♦"}, {number: "A", suit: "♣"}, {number: 10, suit: "♣"}]  
+```
+
+### split_number
+
+数字を各桁に分割します。
+入力(math: in) : 整数(int) => storage math: in
+出力(math: out): 各桁のリスト([int,..]) => storage math: out
+
+```mcfunction
+data modify storage math: in set value 123456789  
+function #math:split_number  
+data get storage math: out  
+# => [1, 2, 3, 4, 5, 6, 7, 8, 9]  
+  
+data modify storage math: in set value -141421356  
+function #math:split_number  
+data get storage math: out  
+# => [-1, 4, 1, 4, 2, 1, 3, 5, 6]  
 ```
 
 ## 連絡はこちら / Contact
