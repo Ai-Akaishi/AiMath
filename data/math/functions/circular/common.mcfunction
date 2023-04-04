@@ -7,7 +7,7 @@
 scoreboard objectives add AiMath dummy
 
 # 角度取得
-execute store result score Angle AiMath run data get storage math: in 1
+execute store result score Angle AiMath run data get storage math: in
 # 360未満に補正
 scoreboard players set _ AiMath 360
 execute store result storage math:_ over180 byte 0.005555556 run scoreboard players operation Angle AiMath %= _ AiMath
@@ -16,7 +16,7 @@ execute store result storage math:_ over180 byte 0.005555556 run scoreboard play
 execute if score Angle AiMath matches 180.. run scoreboard players remove Angle AiMath 180
 
 # 取得したい角度が変化していれば検索
-execute store result score _ AiMath run data get storage math:_ angle 1
+execute if data storage math:_ angle store result score _ AiMath run data get storage math:_ angle
 execute unless score _ AiMath = Angle AiMath run function math:circular/shift_table
 
 # スコアボード削除

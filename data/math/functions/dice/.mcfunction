@@ -1,10 +1,9 @@
-### Copyright © 2021 赤石愛
-### This software is released under the MIT License, see LICENSE.
-
 #> math:dice/
 # サイコロを振った結果を返します。ダイスは1024面くらいまで推奨です。
 ## 入力: NdX(N個のX面ダイス) => storage math: in:[N,X]
-## 出力: 出目と合計値 => storage math: out:{dice:[出目1,出目2,...],sum:合計値}
+## 出力: 出目と合計値 => storage math: out{dice:[出目1,出目2,...],sum:合計値}
+### Copyright © 2021 赤石愛
+### This software is released under the MIT License, see LICENSE.
 
 # 一時的なスコアボード
 scoreboard objectives add AiMath dummy

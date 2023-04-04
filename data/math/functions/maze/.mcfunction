@@ -1,6 +1,3 @@
-### Copyright © 2022 赤石愛
-### This software is released under the MIT License, see LICENSE.
-
 #> math:maze/
 # 32x32部屋までの迷路を生成できます。
 # エンティティを使用しているので、プレイヤーのいる場所からなど
@@ -8,6 +5,8 @@
 ## 入力: サイズ => storage math: in[横, 縦]
 ## (未実装:入力: 形 => storage math: in[[・,・,・],[・,・,・],[・,・,・]])
 ## 出力: 乱数 => storage math: out
+### Copyright © 2022 赤石愛
+### This software is released under the MIT License, see LICENSE.
 
 # 一時的なスコアボード
 scoreboard objectives add AiMath dummy

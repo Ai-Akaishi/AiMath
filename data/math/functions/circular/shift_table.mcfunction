@@ -1,8 +1,7 @@
-### Copyright © 2021 赤石愛
-### This software is released under the MIT License, see LICENSE.
-
 #> math:circular/shift_table
 # 角度に合わせて三角関数テーブルをずらします。
+### Copyright © 2021 赤石愛
+### This software is released under the MIT License, see LICENSE.
 
 # 角度保存
 execute store result storage math:_ angle int 1 run scoreboard players get Angle AiMath
