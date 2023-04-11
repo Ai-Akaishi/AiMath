@@ -6,10 +6,9 @@ Mathematics Functions Library Datapack
 ## 動作確認済みバージョン / Verified minecraft versions
 
 - 1.19.4
-- 1.19.2
-- 1.19
-- 1.18.x
-- 1.17.1
+
+1.17から1.19.3はReleasesを見てね  
+See Relases for 1.17 to 1.19.3.
 
 ## 使い方 / How To Use
 
