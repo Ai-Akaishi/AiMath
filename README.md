@@ -5,6 +5,7 @@ Mathematics Functions Library Datapack
 
 ## 動作確認済みバージョン / Verified minecraft versions
 
+- 1.19.4
 - 1.19.2
 - 1.19
 - 1.18.x
@@ -66,18 +67,20 @@ tellraw @s {"text":"function #math:your_function","underlined": true,"clickEvent
 
 ## 現在標準で対応している関数一覧 / Default Supported Functions
 
-1. sin
-2. cos
-3. tan
-4. sqrt
-5. random
-6. dice
-7. maze
-8. clock
-9. motion
-10. sort/ascend sort/descend
-11. randomize
-12. split_number
+1. [sin](#sincostan)
+2. [cos](#sincostan)
+3. [tan](#sincostan)
+4. [sqrt](#sqrt)
+5. [random](#random)
+6. [dice](#dice)
+7. [maze](#maze)
+8. [clock](#clock)
+9. [motion](#motion)
+10. [sort/ascend sort/descend](#sort)
+11. [randomize](#randomize)
+12. [split_number](#split_number)
+13. [tick2time](#tick2time)
+14. [tick2time2](#tick2time2)
 
 ### sin/cos/tan
 
@@ -253,6 +256,32 @@ data modify storage math: in set value -141421356
 function #math:split_number  
 data get storage math: out  
 # => [-1, 4, 1, 4, 2, 1, 3, 5, 6]  
+```
+
+### tick2time
+
+tick値を(h:)mm:ss.cc形式にします。
+入力(math: in) : tick(int) => storage math: in
+出力(math: out): 時間データ([string,..]) => storage math: out
+
+```mcfunction
+data modify storage math: in set value 123456789  
+function #math:tick2time  
+data get storage math: out  
+# => ["1714", ":", "40", ":", "39", ".", "45"]  
+```
+
+### tick2time2
+
+tick値を(h:)mm:ss形式にします。(端数切り上げ)
+入力(math: in) : tick(int) => storage math: in
+出力(math: out): 時間データ([string,..]) => storage math: out
+
+```mcfunction
+data modify storage math: in set value 123456789  
+function #math:tick2time2  
+data get storage math: out  
+# => ["1714", ":", "40", ":", "40"]  
 ```
 
 ## 連絡はこちら / Contact

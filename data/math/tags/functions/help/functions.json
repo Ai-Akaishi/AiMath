@@ -13,6 +13,7 @@
 		"math:help/sort",
 		"math:help/randomize",
 		"math:help/split_number",
-		"math:help/distance"
+		"math:help/tick2time",
+		"math:help/tick2time2"
 	]
 }
