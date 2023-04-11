@@ -12,6 +12,7 @@ data modify storage math: out set value []
 scoreboard objectives add AiMath dummy
 # 切り上げ処理
 execute store result score _ AiMath run data get storage math: in
+execute if score _ AiMath matches ..-1 run scoreboard players set _ AiMath 0
 execute store result storage math:_ in int 1 run scoreboard players add _ AiMath 19
 # 時間
 execute store result storage math:_ _ int 0.0000138889 run data get storage math:_ in
