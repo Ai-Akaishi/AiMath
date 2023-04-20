@@ -78,8 +78,9 @@ tellraw @s {"text":"function #math:your_function","underlined": true,"clickEvent
 10. [sort/ascend sort/descend](#sort)
 11. [randomize](#randomize)
 12. [split_number](#split_number)
-13. [tick2time](#tick2time)
-14. [tick2time2](#tick2time2)
+13. [float](#float)
+14. [tick2time](#tick2time)
+15. [tick2time2](#tick2time2)
 
 ### sin/cos/tan
 
@@ -255,6 +256,19 @@ data modify storage math: in set value -141421356
 function #math:split_number  
 data get storage math: out  
 # => [-1, 4, 1, 4, 2, 1, 3, 5, 6]  
+```
+
+### float
+
+float型の計算をします。いろいろ。
+入力(math: in) : x(float),y(float/optional) => storage math: in
+出力(math: out): add(x+y),sub(x-y),mul(x*y),div(x/y),inv(1/x),neg(-x)(float) => storage math: out
+
+```mcfunction
+data modify storage math: in set value {x:3f,y:-4f}  
+function #math:split_number  
+data get storage math: out  
+# => {add: -0.9999999f, div: -0.75f, inv: 0.33333334f, neg: -3.0f, sub: 7.0f, mul: -12.0f}  
 ```
 
 ### tick2time
