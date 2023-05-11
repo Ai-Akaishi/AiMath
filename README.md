@@ -81,6 +81,7 @@ tellraw @s {"text":"function #math:your_function","underlined": true,"clickEvent
 13. [float](#float)
 14. [tick2time](#tick2time)
 15. [tick2time2](#tick2time2)
+16. [length](#length)
 
 ### sin/cos/tan
 
@@ -242,9 +243,9 @@ data get storage math: out
 
 ### split_number
 
-数字を各桁に分割します。
-入力(math: in) : 整数(int) => storage math: in
-出力(math: out): 各桁のリスト([int,..]) => storage math: out
+数字を各桁に分割します。  
+入力(math: in) : 整数(int) => storage math: in  
+出力(math: out): 各桁のリスト([int,..]) => storage math: out  
 
 ```mcfunction
 data modify storage math: in set value 123456789  
@@ -260,9 +261,9 @@ data get storage math: out
 
 ### float
 
-float型の計算をします。いろいろ。
-入力(math: in) : x(float),y(float/optional) => storage math: in
-出力(math: out): add(x+y),sub(x-y),mul(x*y),div(x/y),inv(1/x),neg(-x)(float) => storage math: out
+float型の計算をします。いろいろ。  
+入力(math: in) : x(float),y(float/optional) => storage math: in  
+出力(math: out): add(x+y),sub(x-y),mul(x*y),div(x/y),inv(1/x),neg(-x)(float) => storage math: out  
 
 ```mcfunction
 data modify storage math: in set value {x:3f,y:-4f}  
@@ -273,9 +274,9 @@ data get storage math: out
 
 ### tick2time
 
-tick値を(h:)mm:ss.cc形式にします。
-入力(math: in) : tick(int) => storage math: in
-出力(math: out): 時間データ([string,..]) => storage math: out
+tick値を(h:)mm:ss.cc形式にします。  
+入力(math: in) : tick(int) => storage math: in  
+出力(math: out): 時間データ([string,..]) => storage math: out  
 
 ```mcfunction
 data modify storage math: in set value 123456789  
@@ -286,15 +287,29 @@ data get storage math: out
 
 ### tick2time2
 
-tick値を(h:)mm:ss形式にします。(端数切り上げ)
-入力(math: in) : tick(int) => storage math: in
-出力(math: out): 時間データ([string,..]) => storage math: out
+tick値を(h:)mm:ss形式にします。(端数切り上げ)  
+入力(math: in) : tick(int) => storage math: in  
+出力(math: out): 時間データ([string,..]) => storage math: out  
 
 ```mcfunction
 data modify storage math: in set value 123456789  
 function #math:tick2time2  
 data get storage math: out  
 # => ["1714", ":", "40", ":", "40"]  
+```
+
+### length
+
+指定されたベクトルの長さを取得します。  
+入力(math: in) : vector([float,...] or [double,...]) => storage math: in  
+出力(math: out): length(float) => storage math: out  
+
+```mcfunction
+data modify storage math: in set value [5f,4f,3f,2f,1f,0f]  
+function #math:length  
+data get storage math: out  
+# => 7.416206f  
+# = sqrt(5^2+4^2+3^2+2^2+1^2+0^2)
 ```
 
 ## 連絡はこちら / Contact

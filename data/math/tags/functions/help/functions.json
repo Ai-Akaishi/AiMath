@@ -15,6 +15,7 @@
 		"math:help/split_number",
 		"math:help/float",
 		"math:help/tick2time",
-		"math:help/tick2time2"
+		"math:help/tick2time2",
+		"math:help/length"
 	]
 }
