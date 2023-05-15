@@ -316,6 +316,11 @@ data get storage math: out
 
 <https://twitter.com/AiAkaishi>
 
+## Special Thanks
+
+- math:length改良  
+あきぽんさん<https://twitter.com/akiponggg0119>
+
 ## ライセンス / LICENSE
 
 These codes are released under the MIT License, see LICENSE.
