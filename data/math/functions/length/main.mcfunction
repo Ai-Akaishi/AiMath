@@ -16,8 +16,8 @@ data remove storage math:_ _
 execute if data storage math:_ in[-1] run function math:length/rem_zero
 data modify storage math:_ in set from storage math:_ _ 
 
-## ２つ処理
-execute if data storage math:_ in[-2] run function math:length/loop
+## ２つ以上あったら処理
+execute if data storage math:_ in[-2] run function math:length/loop_v2
 
 ## 残った１つが求めたい距離
 data modify storage math: out set value 0f

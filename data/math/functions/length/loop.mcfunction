@@ -66,8 +66,10 @@ data modify entity @s transformation set from storage math:_ matrix
 data modify storage math:_ transformation set from entity @s transformation
 
 ## 結果を入れる
-data modify storage math:_ in[-2] set from storage math:_ transformation.scale[-1]
 data remove storage math:_ in[-1]
+data remove storage math:_ in[-1]
+data modify storage math:_ in append from storage math:_ transformation.scale[-1]
+
 
 ## まだ値が２つ以上残っていたらループ
 execute if data storage math:_ in[-2] run function math:length/loop
